@@ -1,7 +1,7 @@
 from telethon.utils import get_peer_id
 from telethon.tl.functions.users import GetFullUserRequest
 
-from .session import Jmthon, H2, H3, H4, H5
+from .session import SBB_B, H2, H3, H4, H5
 from jmthon.sql.gvar_sql import gvarstat
 
 
