@@ -30,7 +30,7 @@ msg = """{}\n
 """
 #-------------------------------------------------------------------------------
 
-@jmthon_cmd(pattern=$")
+@jmthon_cmd(pattern="فحص$")
 async def up(event):
     cid = await client_id(event)
     RAZAN, JMTHON_USER, jmthon_mention = cid[0], cid[1], cid[2]
