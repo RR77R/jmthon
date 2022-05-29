@@ -29,7 +29,7 @@ async def mediadata(e_media):
     if e_media.file.width:
         jmthon += f"- العرض :  {e_media.file.width}<br>"
     if e_media.file.sticker_set:
-        jmthon += f"- تم وضع الملصقات 
+        jmthon += f"- تم وضع الملصقات :\
             \n {yaml_format(e_media.file.sticker_set)}<br>"
     try:
         if e_media.media.document.thumbs:
