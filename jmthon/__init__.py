@@ -6,7 +6,7 @@ import time
 from distutils.util import strtobool as sb
 from logging import DEBUG, INFO, basicConfig, getLogger
 
-from jmthon.clients.session import H2, H3, H4, H5, Jmthon, RJMTHON
+from jmthon.clients.session import H2, H3, H4, H5, Rr77, SBB_B
 from jmthon.config import Config
 
 
@@ -26,8 +26,8 @@ else:
 
 LOGS = getLogger(__name__)
 
-bot = Jmthon
-tbot = RJMTHON
+bot = Rr77
+tbot = SBB_B
 
 
 if not Config.API_HASH:
@@ -65,6 +65,7 @@ except Exception:
     HEROKU_APP = None
 
 
+# global variables
 CMD_LIST = {}
 CMD_HELP = {}
 CMD_HELP_BOT = {}
@@ -79,4 +80,5 @@ ISAFK = False
 AFKREASON = None
 SUDO_LIST = {}
 
-#t.me/JMTHON
+
+# JMTHON
