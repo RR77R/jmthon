@@ -13,7 +13,7 @@ else:
     session = "jmthon"
 
 try:
-    SBB_B = TelegramClient(
+    Rr77 = TelegramClient(
         session=session,
         api_id=Config.APP_ID,
         api_hash=Config.API_HASH,
@@ -82,8 +82,8 @@ else:
     H5 = None
 
 
-RJMTHON = TelegramClient(
-    session="Jmthon-TBot",
+SBB_B = TelegramClient(
+    session="Rr77-TBot",
     api_id=Config.APP_ID,
     api_hash=Config.API_HASH,
     connection=ConnectionTcpAbridged,
