@@ -13,7 +13,7 @@ else:
     session = "jmthon"
 
 try:
-    Jmthon = TelegramClient(
+    SBB_B = TelegramClient(
         session=session,
         api_id=Config.APP_ID,
         api_hash=Config.API_HASH,
