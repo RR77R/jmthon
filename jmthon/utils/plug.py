@@ -75,9 +75,6 @@ def load_module(shortname):
         mod.admin_cmd = admin_cmd
         mod.jmthon_cmd = jmthon_cmd
         mod.sudo_cmd = sudo_cmd
-        sys.modules["userbot.utils"] = jmthon.utils
-        sys.modules["userbot"] = jmthon
-        sys.modules["userbot.events"] = jmthon
         spec.loader.exec_module(mod)
         sys.modules["jmthon.plugins." + shortname] = mod
         LOGS.info("تم بنجاح تحميل " + shortname)
