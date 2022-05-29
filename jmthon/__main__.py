@@ -7,12 +7,12 @@ from telethon import Button, TelegramClient
 from telethon.utils import get_peer_id
 
 from jmthon import LOGS, bot, tbot
-from jmthon.clients.session import Jmthon, H2, H3, H4, H5
+from jmthon.clients.session import Rr77, H2, H3, H4, H5
 from jmthon.config import Config
 from jmthon.utils import join_it, load_module, logger_check, start_msg, update_sudo, plug_channel
 from jmthon.version import __jmthon__ as jmthonver
 
-rz = Config.HANDLER
+hl = Config.HANDLER
 
 JMTHON_PIC = "https://telegra.ph/file/d85083f6bb31ec14d912b.jpg"
 
@@ -30,6 +30,7 @@ async def jmthons(session=None, client=None, session_name="Main"):
         return 0
 
 
+# Load plugins based on config UNLOAD
 async def plug_load(path):
     files = glob.glob(path)
     for name in files:
@@ -42,6 +43,7 @@ async def plug_load(path):
                 load_module(shortname.replace(".py", ""))      
 
 
+# Final checks after startup
 async def jmthon_is_on(total):
     await update_sudo()
     await logger_check(bot)
@@ -53,6 +55,7 @@ async def jmthon_is_on(total):
     await join_it(H5)
 
 
+# jmthon starter...
 async def start_jmthon():
     try:
         tbot_id = await tbot.get_me()
@@ -89,3 +92,5 @@ else:
     except ConnectionError:
         pass
 
+
+# jmthonbot
