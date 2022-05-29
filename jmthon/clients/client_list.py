@@ -49,13 +49,13 @@ async def clients_list():
 async def client_id(event, botid=None):
     if botid is not None:
         uid = await event.client(GetFullUserRequest(botid))
-        ForGo10God = uid.user.id
+        RAZAN = uid.user.id
         JMTHON_USER = uid.user.first_name
-        jmthon_mention = f"[{JMTHON_USER}](tg://user?id={ForGo10God})"
+        jmthon_mention = f"[{JMTHON_USER}](tg://user?id={RAZAN})"
     else:
         client = await event.client.get_me()
         uid = get_peer_id(client)
-        ForGo10God = uid
+        RAZAN = uid
         JMTHON_USER = client.first_name
-        jmthon_mention = f"[{JMTHON_USER}](tg://user?id={ForGo10God})"
-    return ForGo10God, JMTHON_USER, jmthon_mention
+        jmthon_mention = f"[{JMTHON_USER}](tg://user?id={RAZAN})"
+    return RAZAN, JMTHON_USER, jmthon_mention
