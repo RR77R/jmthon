@@ -1,4 +1,4 @@
-FROM teamvaders/jmthon:latest
+FROM RR77R/jmthon:latest
 
 RUN git clone https://github.com/RR77R/jmthon.git /root/jmthon
 
