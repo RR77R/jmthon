@@ -52,28 +52,3 @@ async def up(event):
     omk = ALIVE_TEMP.format(RAZAN, JMTHON_USER, tel_ver, jmthon_ver, uptime, ling)
     await event.client.send_file(event.chat_id, file=PIC, caption=omk, parse_mode="HTML")
     await jasem.delete()
-
-
-
-@jmthon_cmd(pattern="جمثون$")
-async def jmthon_a(event):
-    cid = await client_id(event)
-    RAZAN, JMTHON_USER, jmthon_mention = cid[0], cid[1], cid[2]
-    uptime = await get_time((time.time() - StartTime))
-    am = gvarstat("ALIVE_MSG") or "<b>»» سورس جمثون يعمل بنجاح ««</b>"
-    try:
-        jasem = await event.client.inline_query(Config.BOT_USERNAME, "فحص")
-        await jasem[0].click(event.chat_id)
-        if event.sender_id == RAZAN:
-            await event.delete()
-    except (noin, dedbot):
-        await eor(event, msg.format(am, tel_ver, jmthon_ver, uptime), parse_mode="HTML")
-
-
-CmdHelp("الفحص").add_command(
-  "فحص", None, "امر فحص جربه بنفسك اكتب الامر فقط"
-).add_command(
-  "جمثون", None, "امر فحص بوضع الانلاين جربه بنفسك."
-).add_warning(
-  "لا توجد مخاطر ✅"
-).add()
