@@ -12,7 +12,7 @@ async def clients_list():
         for b in a:
             c = int(b)
             user_ids.append(c)
-    main_id = await Jmthon.get_me()
+    main_id = await SBB_B.get_me()
     user_ids.append(main_id.id)
 
     try:
